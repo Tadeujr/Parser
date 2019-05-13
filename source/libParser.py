@@ -52,50 +52,6 @@ def separaExpre(expre):
 		
 		return vetSaida
 
-def convertNumero(expre):
-	nA = ""
-	total = None
-	
-	for n in  expre: # so numeros
-		if(digito(n) or '.'):
-			nA += n
-	
-	total =  float(nA)
-	
-	print(total)
-
-	
-def precedencia(expre):#calculo da base
-	caracter = []
-	separador = []
-	
-	for i in range(len(expre)-1,-1,-1):#tam, parada, decremento ou incremento
-		if(expre[i]!=')' and expre[i]!='('):
-			
-			caracter.append(expre[i])
-				
-		elif(expre[i] == '('):
-			separador.append(caracter)
-		
-		else:
-			print("Erro: esta faltando parentese ")	
-						
-		#elif(expre[i] == '^'):
-		#	caracter.append(expre[i-1])
-		#	caracter.append(expre[i+1])
-
-	return caracter
-
-
-def separaSinal(expre):#mudardenome
-	
-	if(not verificaExpressao(expre)):
-		return False
-	
-	else:
-		#busca parenteses
-		print(precedencia(expre))
-			
 	
 def transformaExpressao(expre):
 	saida = None
@@ -165,6 +121,7 @@ def final(expre):
 	total = 0.0
 	
 	if(not transformaExpressao(expre)):
+		print("Expressao invalida!")
 		return False
 	
 	for i in vet:
