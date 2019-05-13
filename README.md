@@ -1,11 +1,13 @@
 # Parser
 Tadeu da Penha Moraes Junior
 
+
+**linguagem:** Python 2.7
+
 # Execução: No linux, 
 1- abra o terminal e digite python na pasta raiz do arquivo<br>
 2- execute o arquivo main.pyc com os comando. ./main.pyc
 
-linguagem: Python 2.7
 
 # main: Função principal
 
